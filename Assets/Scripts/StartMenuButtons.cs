@@ -11,7 +11,8 @@ public class StartMenuButtons : MonoBehaviour
     
     // quits program
     public void ExitProgram() {
-        UnityEditor.EditorApplication.isPlaying = false;
+        // Only leave in the next line if testing from the Unity video
+        //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
 }
