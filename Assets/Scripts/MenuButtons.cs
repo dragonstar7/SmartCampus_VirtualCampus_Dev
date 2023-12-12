@@ -25,6 +25,7 @@ public class MenuButtons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player.SetActive(true);
         MainPanel.SetActive(false);
         MenuPanel.SetActive(false);
         LocationsPanel.SetActive(false);
@@ -90,4 +91,11 @@ public class MenuButtons : MonoBehaviour
         ToggleMenu(); // this closes the menu upon teleportation
 
     }
+
+    // return to start menu
+    public void LoadStartMenu() {
+        player.SetActive(false);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("StartMenu");
+    }
+    
 }
